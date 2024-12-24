@@ -1,0 +1,44 @@
+QEMU Emulator installation
+1.create a folder "Computer Organization\Programming Assignment 0\qemu"
+2. download qemu-w64-setup-20211215.exe from https://qemu.weilnetz.de/w64/2021/qemu-w64-setup-20211215.exe into "Computer Organization\Programming Assignment 0\qemu"
+3. right click on "qemu-w64-setup-20211215.exe" and "Run as Administrator"
+4. install QEMU. It will be installed at C:\Program Files\qemu
+5 Add "C:\Program Files\qemu" to Windows Environment variable "Path"
+
+
+5. download qemu-arm-img.zip from https://drive.google.com/file/d/1C12uSIH37IZQgV9X0am8pBpwsP1laumL/view\6.
+6. unzip (extract) qemu-arm-img.zip into "Computer Organization\Programming Assignment 0\qemu"
+7. double-click on start.bat (windows batch file) in "Computer Organization\Programming Assignment 0\qemu\qemu-arm-img\Windows Scripts
+
+8. Wait until you see "debian-aarch64 login:"
+
+9. double-click on connect.bat (windows batch file) in "Computer Organization\Programming Assignment 0\qemu\qemu-arm-img\Windows Scripts
+10. Enter password as root (now you are Linux. You can check Linux commands (ls, ls -ltr, ls -la, pwd, cd)
+
+First Assembler program:
+hello.s
+
+1. create a folder by name "workdir" under "Computer Organization\Programming Assignment 0\qemu\qemu\qemu-arm-img\workdir"
+2. copy hello-world.s to "Computer Organization\Programming Assignment 0\qemu\qemu\qemu-arm-img\workdir"
+3. double-click on start.bat (windows batch file) in "Computer Organization\Programming Assignment 0\qemu\qemu-arm-img\Windows Scripts
+4. Enter password as root
+5. All files under "Computer Organization\Programming Assignment 0\qemu\qemu\qemu-arm-img\workdir" is now transferred to Linux under directory "wokdir"
+
+6. Go to the Linux window (step 10)
+7. cd workdir
+8. ls -ltr hello-world.s
+
+9. compile hello-world.s
+gcc -o <program name> <filename>.s -g”
+
+-o <program name>” determines the name of the resulting executable
+“<filename>.s” specifies which ARM source file to attempt to assemble
+“-g” links the program for debugging
+
+gcc -o hello-world hello-world.s -g
+
+10. ls -ltr *hello-world". You will find hello-world executable file
+11. run hello-world
+./hello-world
+
+12. Enter poweroff
